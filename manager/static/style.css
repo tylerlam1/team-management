@@ -71,3 +71,11 @@ img {
   border-radius: 100%;
   margin: 15px;
 }
+
+input[type="text"] {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px lightgray;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
