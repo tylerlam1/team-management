@@ -25,10 +25,10 @@ class TeammateUpdateView(UpdateView):
     """
     Edit a particular team member's database information.
     """
-    # form_class = EditTeammateForm
-    # template_name = "edit_user.html"
-    # success_url = "/"
-    pass
+    form_class = EditTeammateForm
+    model = Teammate
+    template_name = "edit_user.html"
+    success_url = "/"
 
 class TeammateDeleteView(DeleteView):
     """
