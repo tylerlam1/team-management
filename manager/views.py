@@ -34,4 +34,6 @@ class TeammateDeleteView(DeleteView):
     """
     Delete a particular team member's database record.
     """
-    pass
+    model = Teammate
+    success_url = "/"
+    

@@ -1,5 +1,10 @@
-<h1>Team Management Application</h1>
-<form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" value="Save" />
-</form>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<div class="content">
+  <h1>Team Management Application</h1>
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <input class="button" type="submit" value="Save" />
+  </form>
+</div>

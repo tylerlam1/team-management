@@ -9,16 +9,17 @@
   </div>
   <ul>
     {% for user in object_list %}
-    <li>
-      <img src="{% static 'images/faceless.jpeg' %}" />
-      <br />
-      {{ user.first_name }} {{ user.last_name }} {% if user.is_admin == True %}
-      (Admin) {% endif %}
-      <br />
-      {{ user.phone_number }}
-      <br />
-      {{ user.email }}
-    </li>
+    <a class="table-cell" href="edit/{{ user.id }}">
+      <li>
+        <img src="{% static 'images/faceless.jpeg' %}" />
+        <br />
+        {{ user.first_name }} {{ user.last_name }} {% if user.is_admin == True %} (Admin) {% endif %}
+        <br />
+        {{ user.phone_number }}
+        <br />
+        {{ user.email }}
+      </li>
+    </a>
     {% empty %}
     <li>No teammates yet.</li>
     {% endfor %}
