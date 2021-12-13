@@ -12,8 +12,8 @@ CREATE_FIELDS = [
 ]
 
 ADMIN_FIELDS = [
-    (True, "Regular - Can't delete members"),
-    (False, "Admin - Can delete members")
+    (False, "Regular - Can't delete members"),
+    (True, "Admin - Can delete members")
 ]
 
 class EditTeammateForm(forms.ModelForm):
