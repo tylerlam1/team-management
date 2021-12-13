@@ -5,6 +5,7 @@
   <h1>Team Management Application</h1>
   <form method="post">
     {% csrf_token %} {{ form.as_p }}
-    <input type="submit" value="Update" />
+    <a class="button" href="{{ request.get_full_path }}/delete">Delete</a>
+    <input class="button" type="submit" name="update" value="Update" />
   </form>
 </div>

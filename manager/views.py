@@ -1,5 +1,5 @@
-from django.views.generic import ListView, CreateView
-from django.views.generic.edit import UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic.edit import DeleteView
 
 from manager.forms import EditTeammateForm
 
@@ -23,7 +23,7 @@ class TeammateCreateView(CreateView):
 
 class TeammateUpdateView(UpdateView):
     """
-    Edit a particular team member's database information.
+    Edit particular team member's database information.
     """
     form_class = EditTeammateForm
     model = Teammate
@@ -32,8 +32,8 @@ class TeammateUpdateView(UpdateView):
 
 class TeammateDeleteView(DeleteView):
     """
-    Delete a particular team member's database record.
+    Delete a particular team member's database information.
     """
     model = Teammate
+    template_name = "delete_user.html"
     success_url = "/"
-    
