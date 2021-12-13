@@ -1,0 +1,11 @@
+<h1>Team Management Application</h1>
+<ul>
+  {% for user in object_list %}
+  <li>
+    {{ user.first_name }} {{ user.last_name }} with phone number {{
+    user.phone_number }} and email {{ user.email }}
+  </li>
+  {% empty %}
+  <li>No teammates yet.</li>
+  {% endfor %}
+</ul>
