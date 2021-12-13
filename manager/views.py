@@ -1,5 +1,7 @@
-from django.http import HttpResponse
 from django.views.generic import ListView, CreateView
+from django.views.generic.edit import UpdateView, DeleteView
+
+from manager.forms import EditTeammateForm
 
 from .models import Teammate
 
@@ -15,13 +17,21 @@ class TeammateCreateView(CreateView):
     """
     Add a new team member to the database.
     """
+    form_class = EditTeammateForm
     template_name = "add_user.html"
-    model = Teammate
-    fields = ["first_name", "last_name", "phone_number", "email"]
     success_url =  "/"
 
-def edit_user(request, user_id):
+class TeammateUpdateView(UpdateView):
     """
     Edit a particular team member's database information.
     """
-    return HttpResponse("Edit a team member here.")
+    # form_class = EditTeammateForm
+    # template_name = "edit_user.html"
+    # success_url = "/"
+    pass
+
+class TeammateDeleteView(DeleteView):
+    """
+    Delete a particular team member's database record.
+    """
+    pass
