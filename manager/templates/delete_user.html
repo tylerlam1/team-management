@@ -6,6 +6,7 @@
     {% csrf_token %}
     <p>Are you sure you want to delete {{ object.first_name }} from the app?</p>
     {{ form }}
-    <input type="submit" value="Confirm" />
+    <a class="button" href="/">Cancel</a>
+    <input class="button" type="submit" value="Confirm" />
   </form>
 </div>

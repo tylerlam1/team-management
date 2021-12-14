@@ -33,13 +33,14 @@ h2 {
 }
 
 .button {
-  width: 115px;
+  height: 39px;
+  width: 70px;
+  font-size: 15px;
   background: grey;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
   color: white;
-  font-weight: bold;
   text-decoration: none;
 }
 
@@ -78,4 +79,10 @@ input[type="text"] {
   box-shadow: 0 0 0 1px lightgray;
   border-radius: 4px;
   padding: 10px 10px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border-width: 0;
+  border-style: none;
 }
