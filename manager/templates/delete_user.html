@@ -2,6 +2,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 
 <div class="content">
+  {% include "common/header.html" %}
   <form method="post">
     {% csrf_token %}
     <p>Are you sure you want to delete {{ object.first_name }} from the app?</p>

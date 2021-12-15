@@ -2,8 +2,8 @@
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
 
 <div class="content">
-  <h1>Team Management Application</h1>
-  <h2>You have {{ object_list|length }} team members.</h2>
+  {% include "common/header.html" %}
+  <h2>You have {{ object_list|length }} team member{% if object_list|length != 1 %}s{% endif %}.</h2>
   <div class="right-align">
     <a href="/add" class="button">Add Member</a>
   </div>
@@ -11,7 +11,7 @@
     {% for user in object_list %}
     <a class="table-cell" href="edit/{{ user.id }}">
       <li>
-        <img src="{% static 'images/faceless.jpeg' %}" />
+        <img src="{% static 'images/faceless.svg' %}" />
         <br />
         {{ user.first_name }} {{ user.last_name }} {% if user.is_admin == True %} (Admin) {% endif %}
         <br />
@@ -21,7 +21,7 @@
       </li>
     </a>
     {% empty %}
-    <li>No teammates yet.</li>
+    <li>No teammates at the moment. Click add member on the right side of the screen to add a new teammate.</li>
     {% endfor %}
   </ul>
 </div>
