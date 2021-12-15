@@ -32,7 +32,7 @@ h2 {
 
 .button {
   height: 39px;
-  width: 70px;
+  width: 80px;
   font-size: 15px;
   background: #007bff;
   padding: 10px;
@@ -81,6 +81,7 @@ input[type="text"] {
 }
 
 input[type="submit"] {
+  font-family: 'Readex Pro', sans-serif;
   cursor: pointer;
   border-width: 0;
   border-style: none;
